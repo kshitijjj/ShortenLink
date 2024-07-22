@@ -21,8 +21,6 @@ function App() {
         <Route path="/login" element={<Login/>}/>
         <Route path="/slinkify" element={<Slinkify/>}/>
         <Route path="/slinkify/History" element={<LinkHistory/>}/>
-        <Route path="https://cdpt.in/:id" element={<Tracking/>}/>
-
       </Routes>
     </Router>
 
