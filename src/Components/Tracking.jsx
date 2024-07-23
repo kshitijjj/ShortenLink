@@ -23,4 +23,7 @@ const Tracking = () => {
     return null;
 };
 
-export default Tracking; */
+<<<<<<< HEAD
+export default Tracking; *
+export default Tracking;
+ */
