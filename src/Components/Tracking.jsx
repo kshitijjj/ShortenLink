@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+/* import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
@@ -23,4 +23,4 @@ const Tracking = () => {
     return null;
 };
 
-export default Tracking;
+export default Tracking; */

@@ -81,7 +81,6 @@ import Tracking from './Tracking';
 
     return (
         <>
-        <Tracking id={userid}/>
         {loading?( 
         <Lottie className='w-[25rem] h-[25rem] m-auto mt-[8rem] justify-center ' animationData={animationData1} loop={true} />
         ):
@@ -97,7 +96,7 @@ import Tracking from './Tracking';
                 </Headroom>
             )}
     
-            <div className="flex flex-col-reverse items-center justify-center py-[2rem] md:flex-row md:justify-evenly ">
+            <div className="flex flex-col-reverse items-center justify-center py-[4rem] md:flex-row md:justify-evenly ">
     
                 {/* left side part full div */}
                 <div className="pt-[2.3rem] md:pt-[2rem] md:w-[39rem]">

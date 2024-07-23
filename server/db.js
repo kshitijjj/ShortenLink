@@ -1,6 +1,6 @@
 const mongoose=require('mongoose');
 const bcrypt=require('bcrypt');
-mongoose.connect("mongodb://localhost:27017/serverDB").then(()=>console.log("db connected successfully"));
+mongoose.connect("mongodb+srv://myank07official:2UBzNhUWSesXI8dT@mayank.jzywnhr.mongodb.net/serverDB").then(()=>console.log("db connected successfully"));
 
 
 /* USER CREDENTIALS SCHEMA */

@@ -133,7 +133,7 @@ app.get("/slinkify/history",jwtAuthMiddleware,async(req,res)=>{
     }
 })
 
-app.get("/:shortId", async (req, res) => {
+/* app.get("/:shortId", async (req, res) => {
     console.log("Track request received");
     const shortId = req.params.shortId;
     try {
@@ -153,7 +153,7 @@ app.get("/:shortId", async (req, res) => {
         console.error(error);
         res.status(500).send('Server error');
     }
-});
+}); */
 
 
 
