@@ -26,7 +26,7 @@ import Tracking from './Tracking';
                 const token = localStorage.getItem('token');
                 if (token) {
                     try {
-                        const response = await axios.get('http://localhost:3001/user', {
+                        const response = await axios.get('https://slinkify.vercel.app//user', {
                             headers: {
                                 'Authorization': `Bearer ${token}`
                             }

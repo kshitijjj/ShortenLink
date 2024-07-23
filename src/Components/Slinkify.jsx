@@ -15,7 +15,7 @@ import "aos/dist/aos.css";
 
 const Slinkify = () => {
     let qrCodeRef = useRef(null);
-    const num="https://localhost:3000/home"
+    const num="https://slinkify.vercel.app/home"
     const navigate=useNavigate();
     const [inputLink, setInputLink] = useState("");
     const [shortLink,setShortLink]=useState("");
