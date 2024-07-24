@@ -97,7 +97,7 @@ app.get("/",jwtAuthMiddleware ,async (req,res)=>{
 })
 
 /* Slinkify route */
-app.post('/slinkify',jwtAuthMiddleware,async (req,res)=>{
+app.post('/shortenlink',jwtAuthMiddleware,async (req,res)=>{
     const {inputLink}=req.body;
     try {
         shortUrl.short(inputLink,(err,url)=>{
@@ -123,7 +123,7 @@ app.post('/slinkify',jwtAuthMiddleware,async (req,res)=>{
 })
 
 /* History details by id  */
-app.get("/slinkify/history",jwtAuthMiddleware,async(req,res)=>{
+app.get("/shortenlink/history",jwtAuthMiddleware,async(req,res)=>{
     try {
         const userId=await Url.find({userId:req.user.id});
         console.log(userId);
