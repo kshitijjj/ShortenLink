@@ -6,6 +6,7 @@ import Lottie from 'lottie-react';
 import animationData1 from '../loading.json'
 
 const Login = () => {
+    axios.defaults.withCredentials=true;
     const navigate=useNavigate();
     const [email,setEmail]=useState("");
     const [password,setPassword]=useState("");
