@@ -15,7 +15,7 @@ const Login = () => {
         e.preventDefault();
 
         try {
-            const response = await axios.post("https://shorten-link-jet.vercel.app/login",{email,password});
+            const response = await axios.post("https://shorten-link-tan.vercel.app/login",{email,password});
             setLoading(true);
             if(response.status===200){
                 setTimeout(() => {
