@@ -8,7 +8,7 @@ require('dotenv').config();
 var shortUrl = require("node-url-shortener");
 
 app.use(cors({
-    origin: '',
+    origin: 'https://shorten-link-frontend-henna.vercel.app',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true,
 }));
