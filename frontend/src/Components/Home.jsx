@@ -16,6 +16,7 @@ import animationData1 from '../loading.json'
 import Tracking from './Tracking';
 
     const Home=()=>{
+        axios.defaults.withCredentials=true;
         const navigate=useNavigate();
         const [LoggedIn,setLoggedIn]=useState(false);
         const [user,setUser]=useState(null);
