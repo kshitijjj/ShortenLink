@@ -20,7 +20,7 @@ const Signup = () => {
         
        
         try {
-            const response = await axios.post("https://shorten-link-beta.vercel.app/signup",{name,email,password,confirmPassword},{ withCredentials: true });
+            const response = await axios.post("https://shorten-link-beta.vercel.app/signup",{name,email,password,confirmPassword},{ withCredentials: false });
             setLoading(true);
             if(response.status===200){
                 /* console.log("Hogya chl gya sign in hogya") */
