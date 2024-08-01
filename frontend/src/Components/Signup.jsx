@@ -6,7 +6,7 @@ import animationData1 from '../loading.json'
 import Lottie from 'lottie-react';
 
 const Signup = () => {
-    axios.defaults.withCredentials=true;
+    
     const navigate=useNavigate();
     const [name,setName]=useState("");
     const [email,setEmail]=useState("");
@@ -15,12 +15,13 @@ const Signup = () => {
     const [animate,setAnimate]=useState(false);
     const [loading,setLoading]=useState(false);
 
+    axios.defaults.withCredentials=true;
     const HandleSubmit = async (e) =>{
         e.preventDefault();
         
        
         try {
-            const response = await axios.post("https://shorten-link-beta.vercel.app/signup",{name,email,password,confirmPassword},{ withCredentials: false });
+            const response = await axios.post("https://shorten-link-beta.vercel.app/signup",{name,email,password,confirmPassword});
             setLoading(true);
             if(response.status===200){
                 /* console.log("Hogya chl gya sign in hogya") */
