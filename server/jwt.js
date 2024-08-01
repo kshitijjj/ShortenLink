@@ -26,7 +26,7 @@ const jwtAuthMiddleware=(req,res,next)=>{
 
 //fucntion to generate token
 const gentoken=(userData)=>{
-    return jwt.sign(userData,JWT_SECRET,{expiresIn:300000});
+    return jwt.sign(userData,JWT_SECRET);
 }
 
 module.exports={jwtAuthMiddleware,gentoken};
