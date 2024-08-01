@@ -4,7 +4,11 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+axios.defaults.withCredentials = true;  // Include credentials with requests
+axios.defaults.baseURL = 'https://shorten-link-beta.vercel.app'// Optional: set base URL
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   <React.StrictMode>
     <App />
