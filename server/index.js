@@ -89,7 +89,8 @@ app.get('/user', jwtAuthMiddleware, async (req, res) => {
 
 app.get("/", (req, res) => {
     res.json({ message: 'Welcome to the backend API' });
-});
+}); 
+
 
 /* Slinkify route */
 app.post('/shortenlink',jwtAuthMiddleware,async (req,res)=>{
