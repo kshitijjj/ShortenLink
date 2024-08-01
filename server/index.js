@@ -87,7 +87,8 @@ app.get('/user', jwtAuthMiddleware, async (req, res) => {
 });
 
 
-app.get("/",jwtAuthMiddleware ,async (req,res)=>{
+app.get("/" ,async (req,res)=>{
+  console.log("Hello");
     try {
         const data=await User.find();
         console.log(data);
