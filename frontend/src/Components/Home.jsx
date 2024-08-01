@@ -27,7 +27,7 @@ import Tracking from './Tracking';
                 const token = localStorage.getItem('token');
                 if (token) {
                     try {
-                        const response = await axios.get('https://shorten-link-beta.vercel.app/user', {
+                        const response = await axios.get('https://shortenlink-api.onrender.com/user', {
                             headers: {
                                 'Authorization': `Bearer ${token}`
                             }

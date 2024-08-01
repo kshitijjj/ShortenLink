@@ -16,7 +16,7 @@ import "aos/dist/aos.css";
 const Slinkify = () => {
     axios.defaults.withCredentials=true;
     let qrCodeRef = useRef(null);
-    const num="https://shorten-link-beta.vercel.app/home"
+    const num="https://shortenlink-api.onrender.com/home"
     const navigate=useNavigate();
     const [inputLink, setInputLink] = useState("");
     const [shortLink,setShortLink]=useState("");
@@ -44,7 +44,7 @@ const Slinkify = () => {
                         'Content-Type': 'application/json'
                     }
                 };
-                const response = await axios.post(`https://shorten-link-beta.vercel.app/shortenlink`, { inputLink }, config);
+                const response = await axios.post(`https://shortenlink-api.onrender.com/shortenlink`, { inputLink }, config);
                 const shortenUrl=response.data.shortenUrl;
                 settransition(!transition);
 
@@ -71,7 +71,7 @@ const Slinkify = () => {
                         Authorization: `Bearer ${token}`,
                     },
                 };
-                const history=await axios.get("https://shorten-link-beta.vercel.app/shortenlink/history",config);
+                const history=await axios.get("https://shortenlink-api.onrender.com/shortenlink/history",config);
                 console.log(history.data);
                 navigate("/shortenlink/history")
             } catch (error) {

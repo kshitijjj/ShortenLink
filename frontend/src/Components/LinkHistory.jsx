@@ -38,7 +38,7 @@ const LinkHistory = () => {
                         Authorization: `Bearer ${token}`,
                     },
                 };
-            const res=await axios.get("https://shorten-link-beta.vercel.app/shortenlink/history",config);
+            const res=await axios.get("https://shortenlink-api.onrender.com/shortenlink/history",config);
             console.log("data is:",res.data[0].inputUrl); 
 
             if(Array.isArray(res.data)){
