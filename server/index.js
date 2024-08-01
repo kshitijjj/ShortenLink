@@ -9,7 +9,9 @@ var shortUrl = require("node-url-shortener");
 
 
 
-app.use(cors());
+app.use(cors({
+    origin: 'https://shorten-link-jet.vercel.app' // Allow requests from your frontend domain
+  }));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
