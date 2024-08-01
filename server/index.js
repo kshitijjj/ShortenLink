@@ -11,7 +11,7 @@ var shortUrl = require("node-url-shortener");
 
 app.use(cors(
     {
-        origin:[""],
+        origin:["https://shorten-link-frontend-silk.vercel.app"],
         methods:["POST","GET"],
         credentials:true
     }
