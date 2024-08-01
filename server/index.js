@@ -7,16 +7,18 @@ const {jwtAuthMiddleware,gentoken}=require('./jwt');
 require('dotenv').config();
 var shortUrl = require("node-url-shortener");
 
+app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', 'https://shorten-link-frontend-henna.vercel.app'); // Replace with your frontend URL
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
 
+    // Handle preflight requests
+    if (req.method === 'OPTIONS') {
+        return res.status(204).end();
+    }
 
-const corsOptions = {
-    origin: 'https://shorten-link-frontend-henna.vercel.app',
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    credentials: true,
-    allowedHeaders: ['Content-Type', 'Authorization']
-};
-
-  app.use(cors(corsOptions));
+    next();
+});
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
