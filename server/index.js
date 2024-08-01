@@ -10,8 +10,10 @@ var shortUrl = require("node-url-shortener");
 
 
 app.use(cors({
-    origin: 'https://shorten-link-git-my-new-branch-kshitijjjs-projects.vercel.app' // Allow requests from your frontend domain
-  }));
+    origin: 'https://shorten-link-git-my-new-branch-kshitijjjs-projects.vercel.app', // Replace with your frontend URL
+    methods: 'GET,POST,PUT,DELETE',
+    allowedHeaders: 'Content-Type,Authorization',
+}));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
