@@ -15,13 +15,13 @@ const Signup = () => {
     const [animate,setAnimate]=useState(false);
     const [loading,setLoading]=useState(false);
 
-    axios.defaults.withCredentials=true;
+    
     const HandleSubmit = async (e) =>{
         e.preventDefault();
         
        
         try {
-            const response = await axios.post("https://shorten-link-beta.vercel.app/signup",{name,email,password,confirmPassword});
+            const response = await axios.post("https://shorten-link-beta.vercel.app/signup",{name,email,password,confirmPassword},{ withCredentials: true });
             setLoading(true);
             if(response.status===200){
                 /* console.log("Hogya chl gya sign in hogya") */
