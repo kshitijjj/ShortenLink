@@ -9,13 +9,13 @@ var shortUrl = require("node-url-shortener");
 
 
 
-app.use(cors(
-    {
-        origin:["https://shorten-link-frontend-silk.vercel.app"],
-        methods:["POST","GET"],
-        credentials:true
-    }
-));
+const corsOptions = {
+    origin: 'https://shorten-link-frontend-silk.vercel.app', // Your front-end domain
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+  };
+
+  app.use(cors(corsOptions));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
