@@ -15,7 +15,7 @@ import "aos/dist/aos.css";
 
 const Slinkify = () => {
     let qrCodeRef = useRef(null);
-    const num="https://shorten-link-tan.vercel.app/home"
+    const num="https://shorten-link-git-my-new-branch-kshitijjjs-projects.vercel.app/home"
     const navigate=useNavigate();
     const [inputLink, setInputLink] = useState("");
     const [shortLink,setShortLink]=useState("");
