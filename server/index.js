@@ -74,6 +74,11 @@ app.post("/login",async (req,res)=>{
     }
 })
 
+app.get("/check" ,(req,res)=>{
+    res.json("working");
+})
+
+
 /* Loggedin user info */
 app.get('/user', jwtAuthMiddleware, async (req, res) => {
     try {
