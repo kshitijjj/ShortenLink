@@ -14,6 +14,7 @@ import { toPng } from 'html-to-image';
 import "aos/dist/aos.css";
 
 const Slinkify = () => {
+    axios.defaults.withCredentials=true;
     let qrCodeRef = useRef(null);
     const num="https://shorten-link-beta.vercel.app/home"
     const navigate=useNavigate();
