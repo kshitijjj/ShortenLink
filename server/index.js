@@ -12,7 +12,8 @@ var shortUrl = require("node-url-shortener");
 const corsOptions = {
     origin: 'https://shorten-link-frontend-henna.vercel.app', // Your front-end domain
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    credentials:true
+    credentials:true,
+    allowedHeaders: ['Content-Type', 'Authorization'] // Allow headers
   };
 
   app.use(cors(corsOptions));
