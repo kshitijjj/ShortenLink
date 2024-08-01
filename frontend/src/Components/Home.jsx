@@ -112,7 +112,7 @@ import Tracking from './Tracking';
                     <div className="pt-[1.2rem] md:pt-[1.5rem] justify-center md:justify-start md:text-left text-center w-[28rem] px-[1.4rem] md:px-0 md:w-[35rem] "> 
                         <p className="items-center leading-relaxed md:leading-loose tracking-[0.1em] text-base md:text-lg" >Streamline your URLs and ignite</p>
                         <p className="items-center leading-relaxed md:leading-loose tracking-[0.1em] text-base md:text-lg" >your day with our advanced link shortener </p>
-                        <p className="items-center leading-relaxed md:leading-loose tracking-[0.1em] text-base md:text-lg">and dynamic quote .</p>
+                        <p className="items-center leading-relaxed md:leading-loose tracking-[0.1em] text-base md:text-lg">and dynamic quote generator .</p>
                     </div>
     
                    {/* Login sign up Button css and jsx */}
